@@ -28,7 +28,7 @@
 		}
 
 		h1 {
-			font-size: 32px;
+			font-size: 1em;
 			margin: 16px 0 0 0;
 		}
 	</style>
