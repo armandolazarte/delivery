@@ -1,4 +1,4 @@
 Delivery App
 ===========================
 
-Proyecto en Laravel para el control de entregas...
+Proyecto en Laravel para el control de entregas.
