@@ -14,5 +14,6 @@
 Route::get('/', 'HomeController@showWelcome');
 
 Route::get('users',function(){
-    return 'Prueba!';
+    $users = User::all();
+    return View::make('users')->with('users',$users);
 });
