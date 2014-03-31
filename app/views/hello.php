@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Laravel PHP Framework</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 </head>
 <body>
 	<div class="welcome">
