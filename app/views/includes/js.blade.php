@@ -1,1 +1,3 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.map"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
