@@ -20,7 +20,7 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 		//Página default
-		$this->layout->content =  View::make('pages.inicio');
+		$this->layout->content = View::make('pages.inicio');
 	}
 
 }
