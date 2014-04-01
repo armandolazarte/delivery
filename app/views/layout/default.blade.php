@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,11 +5,11 @@
 	</head>
     <body>
         @include('includes.navbar')
-    	@include('includes.header')
         <div class="container">
+            @include('includes.header')
             @yield('content')
+            @include('includes.footer')
         </div>
-        @include('includes.footer')
     </body>
     @include('includes.js')
 </html>
