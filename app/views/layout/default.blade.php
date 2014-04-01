@@ -9,9 +9,11 @@
         <div class="container">
             @include('includes.header')
             <div class="row">
-                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
                     @yield('content')
-                <div class="col-md-10"></div>
+                </div>
             </div>            
             @include('includes.footer')
         </div>
