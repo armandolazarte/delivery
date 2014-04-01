@@ -1,4 +1,4 @@
-<nav id="navigation">
+<nav class="navbar navbar-default" role="navigation">
 	<div class="container">
         <ul class="navlinks">
           <li><a href="index.html">Homepage</a></li>
