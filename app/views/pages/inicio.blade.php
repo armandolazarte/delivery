@@ -1,6 +1,6 @@
 @extends('layout.default')
 @section('content')
 	<div>
-		Hola mundo!.
+		que cagada
 	</div>
 @stop
