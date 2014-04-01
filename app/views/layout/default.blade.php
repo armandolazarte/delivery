@@ -5,9 +5,14 @@
 	</head>
     <body>
         @include('includes.navbar')
+
         <div class="container">
             @include('includes.header')
-            @yield('content')
+            <div class="row">
+                <div class="col-md-2"></div>
+                    @yield('content')
+                <div class="col-md-10"></div>
+            </div>            
             @include('includes.footer')
         </div>
     </body>
