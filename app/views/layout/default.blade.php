@@ -10,6 +10,7 @@
             @include('includes.header')
             <div class="row">
                 <div class="col-md-2">
+                hola mundo
                 </div>
                 <div class="col-md-10">
                     @yield('content')
