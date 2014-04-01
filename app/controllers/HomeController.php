@@ -15,11 +15,12 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	protected $layout =  'layouts.master';
+	protected $layout =  'layout.default';
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		//Página default
+		$this->layout->content =  View::make('pages.inicio');
 	}
 
 }
