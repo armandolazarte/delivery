@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
-        <ul class="navlinks">
+        <ul class="nav navbar-nav navbar-right">
           <li><a href="index.html">Homepage</a></li>
           <li><a href="index.html">About Us</a></li>
           <li><a href="index.html">Projects</a></li>
