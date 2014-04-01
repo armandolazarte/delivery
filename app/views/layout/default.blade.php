@@ -2,17 +2,14 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<title>Laravel PHP Framework</title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		@include('includes.head')
 	</head>
     <body>
-        @section('sidebar')
-            This is the master sidebar.
-        @show
-
+    	@include('includes.header')
         <div class="container">
             @yield('content')
         </div>
+        @include('includes.footer')
     </body>
+    @include('includes.js')
 </html>
