@@ -17,8 +17,8 @@
                             <li><a class="text-center" href="#"><span class="glyphicon glyphicon-edit"></span> Editar</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-8 panel panel-info">
-                    <form role="form" class="form form-horizontal panel-body">
+                    <div class="col-md-8 well">
+                    <form role="form" class="form form-horizontal">
                         <div class="form-group">
                             <label class="control-label col-md-3 text-muted" for="form_ventas_rif">RIF: </label>
                             <div class="col-md-5">
