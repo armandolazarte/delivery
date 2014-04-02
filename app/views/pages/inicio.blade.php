@@ -10,26 +10,20 @@
 			</ul>
         </div>
         <div class="col-md-9">
-            <table class="table table-stripped table-condensed">
-            	<thead>
-            		<th>ID</th>
-            		<th>N° de Control</th>
-            		<th>N° de Factura</th>
-            		<th>Nombre</th>
-            		<th>Monto</th>
-            	</thead>
-            	<tbody>
-            		<tr>
-            			<td>1</td>
-            			<td>45000</td>
-            			<td>48999</td>
-            			<td>Importadora La Villa de las Mascotas, C.A.</td>
-            			<td>45.000</td>
-            		</tr>
-            	</tbody>
-            	<tfoot>
-            	</tfoot>
-            </table>
+            <form role="form">
+                <div class="form-group">
+                    <label for="form_ventas_nombre">Nombre o razón social</label>
+                    <input type="text" class="form-control" name="ventas_nombre" id="form_ventas_nombre">
+                </div>
+                <div class="form-group">
+                    <label for="form_ventas_control">Número de control</label>
+                    <input type="text" class="form-control" name="ventas_control" id="form_ventas_control">
+                </div>
+                <div class="form-group">
+                    <label for="form_ventas_factura">Número de factura</label>
+                    <input type="text" class="form-control" name="ventas_factura" id="form_ventas_factura">
+                </div>
+            </form>
         </div>
     </div>   
 @stop

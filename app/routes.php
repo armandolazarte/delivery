@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('ventas','IncomeController@agregarVenta');
 
 Route::get('users',function(){
     $users = User::all();
