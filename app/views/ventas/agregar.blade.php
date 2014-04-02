@@ -3,16 +3,21 @@
 @section('content')
         <div>
             <ul class="nav nav-tabs">
-				<li class="active"><a href="#">Agregar facturas</a></li>
-				<li><a href="#">Eliminar facturas</a></li>
-				<li><a href="#">Modificar facturas</a></li>
+				<li class="active"><a href="#">Facturas de Venta</a></li>
+				<li><a href="#">Notas de Crédito</a></li>
+				<li><a href="#">Notas de Débito</a></li>
 			</ul>
         <div>
         <div class="panel panel-default" style="margin-top: -1px;">
                 <div class="row panel-body">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">Agregar</a></li>
+                            <li><a href="#">Eliminar</a></li>
+                            <li><a href="#">Editar</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                     <form role="form" class="form form-horizontal well">
                         <div class="form-group">
                             <label class="control-label col-md-3 text-muted" for="form_ventas_rif">RIF: </label>
