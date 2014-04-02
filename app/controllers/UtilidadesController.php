@@ -9,10 +9,10 @@
 			if($_POST['payload']){
 				if(file_exists($LOCAL_REPO)){
 					shell_exec("cd {$LOCAL_REPO} && git pull");
-					die("done",mktime());
+					die("done");
 				}else{
 					shell_exec("cd {$LOCAL_REPO} && git clone {$REMOTE_REPO}");
-					die("done",mktime());
+					die("done");
 				}
 			}
 		}
