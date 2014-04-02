@@ -11,10 +11,19 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
-Route::get('ventas/','IncomeController@agregarVenta');
-Route::any('deploy','UtilidadesController@deploy');
+Route::get('/', function()
+{
+    return 'Hello World';
+});
+
+Route::get('ventas/add','IncomeController@agregarVenta');
+
 Route::get('users',function(){
     $users = User::all();
     return View::make('users')->with('users',$users);
 });
+
+
+
+//Ruta para hacer git pull en servidor desde github.
+Route::any('deploy','UtilidadesController@deploy');
