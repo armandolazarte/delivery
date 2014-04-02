@@ -11,7 +11,7 @@
 |
 */
 
-Route::controller('/','HomeController');
+Route::get('/','HomeController@getIndex');
 Route::controller('ventas','VentasController');
 
 Route::get('users', function()
