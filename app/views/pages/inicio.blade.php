@@ -1,5 +1,6 @@
 @extends('layout.default')
 @section('sidebar')
+	@parent
 	<ul class="nav nav-stacked">
 		<li><a>Agregar facturas</a></li>
 		<li><a>Eliminar facturas</a></li>
