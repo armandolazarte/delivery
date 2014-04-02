@@ -12,9 +12,9 @@
                 <div class="row panel-body">
                     <div class="col-md-2">
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="active"><a class="text-center" href="#"><span class="glyphicon glyphicon-plus" />Agregar</a></li>
-                            <li><a class="text-center" href="#"><span class="glyphicon glyphicon-minus" />Eliminar</a></li>
-                            <li><a class="text-center" href="#"><span class="glyphicon glyphicon-edit" />Editar</a></li>
+                            <li class="active"><a class="text-center" href="#"><span class="glyphicon glyphicon-plus"></span> Agregar</a></li>
+                            <li><a class="text-center" href="#"><span class="glyphicon glyphicon-minus"></span> Eliminar</a></li>
+                            <li><a class="text-center" href="#"><span class="glyphicon glyphicon-edit"></span> Editar</a></li>
                         </ul>
                     </div>
                     <div class="col-md-8 panel panel-info">
