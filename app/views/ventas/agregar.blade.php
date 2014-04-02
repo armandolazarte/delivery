@@ -12,13 +12,13 @@
                 <div class="row panel-body">
                     <div class="col-md-2">
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="active"><a href="#">Agregar</a></li>
-                            <li><a href="#">Eliminar</a></li>
-                            <li><a href="#">Editar</a></li>
+                            <li class="active"><a class="text-center" href="#">Agregar</a></li>
+                            <li><a class="text-center" href="#">Eliminar</a></li>
+                            <li><a class="text-center" href="#">Editar</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-10">
-                    <form role="form" class="form form-horizontal well">
+                    <div class="col-md-10 panel panel-info">
+                    <form role="form" class="form form-horizontal panel-body">
                         <div class="form-group">
                             <label class="control-label col-md-3 text-muted" for="form_ventas_rif">RIF: </label>
                             <div class="col-md-5">
