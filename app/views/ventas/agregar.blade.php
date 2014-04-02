@@ -8,7 +8,8 @@
 				<li><a href="#">Modificar facturas</a></li>
 			</ul>
         <div>
-        <div class="well" style="background: white;">
+        <div class="panel panel-default" style="margin-top: -1px;">
+            <div class="panel-body">
             <form role="form" class="form form-horizontal">
                 <div class="form-group">
                     <label class="control-label col-md-3" for="form_ventas_rif">RIF</label>
@@ -41,5 +42,6 @@
                     </div>
                 </div>
             </form>
+            </div>
         </div>   
 @stop
