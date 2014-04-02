@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@showWelcome');
 Route::get('ventas/','IncomeController@agregarVenta');
-Route::get('deploy,UtilidadesController@deploy');
+Route::get('deploy','UtilidadesController@deploy');
 Route::get('users',function(){
     $users = User::all();
     return View::make('users')->with('users',$users);
