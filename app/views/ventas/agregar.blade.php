@@ -41,6 +41,25 @@
                         <input type="text" class="form-control input-sm" name="ventas_fecha_fact" id="form_ventas_fecha_fact">
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-3 text-muted" for="form_ventas_reg_maq">Nº Registro de máquina: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control input-sm" name="ventas_reg_maq" id="form_ventas_reg_maq">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 text-muted" for="form_ventas_nota_deb">Nº Nota de débito: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control input-sm" name="ventas_nota_deb" id="form_ventas_nota_deb">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 text-muted" for="form_ventas_nota_cred">Nº Nota de crédito: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control input-sm" name="ventas_nota_cred" id="form_ventas_nota_cred">
+                    </div>
+                </div>
             </form>
             </div>
         </div>   
