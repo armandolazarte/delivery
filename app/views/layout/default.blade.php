@@ -8,14 +8,7 @@
 
         <div class="container">
             @include('includes.header')
-            <div class="row">
-                <div class="col-md-2">
-                hola mundo
-                </div>
-                <div class="col-md-10">
-                    @yield('content')
-                </div>
-            </div>            
+            @yield('content')
             @include('includes.footer')
         </div>
     </body>
