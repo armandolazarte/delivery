@@ -1,15 +1,14 @@
 @extends('layout.default')
 
 @section('content')
-	<div class="row">
-        <div class="col-md-3">
-            <ul class="nav nav-pills nav-stacked">
+        <div>
+            <ul class="nav nav-tabs">
 				<li class="active"><a href="#">Agregar facturas</a></li>
 				<li><a href="#">Eliminar facturas</a></li>
 				<li><a href="#">Modificar facturas</a></li>
 			</ul>
-        </div>
-        <div class="col-md-9 dataform">
+        <div>
+        <div class="well-sm">
             <form role="form" class="form form-horizontal">
                 <div class="form-group">
                     <label class="control-label col-md-3" for="form_ventas_rif">RIF</label>
@@ -42,6 +41,5 @@
                     </div>
                 </div>
             </form>
-        </div>
-    </div>   
+        </div>   
 @stop
