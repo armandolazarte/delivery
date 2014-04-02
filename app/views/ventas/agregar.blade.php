@@ -1,7 +1,7 @@
 @extends('layout.default')
 
 @section('content')
-	<div class="row">
+	<div class="row dataform">
         <div class="col-md-3">
             <ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="#">Agregar facturas</a></li>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3" for="form_ventas_nombre">Nombre o razón social</label>
+                    <label class="control-label col-md-3" for="form_ventas_nombre">Razón social</label>
                     <div class="col-md-5">
                         <input type="text" class="form-control input-sm" name="ventas_nombre" id="form_ventas_nombre">
                     </div>
