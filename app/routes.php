@@ -16,14 +16,15 @@ Route::get('/', function()
     return 'Hello World';
 });
 
-Route::get('ventas/add','IncomeController@agregarVenta');
+//Route::get('ventas/add','VentasController@agregarVenta');
 
-Route::get('users',function(){
+Route::get('users', function()
+{
     $users = User::all();
     return View::make('users')->with('users',$users);
 });
 
-
+Route::controller('ventas','VentasController');
 
 //Ruta para hacer git pull en servidor desde github.
 Route::any('deploy','UtilidadesController@deploy');
