@@ -10,7 +10,7 @@
 			</ul>
         </div>
         <div class="col-md-9">
-            <table class="table table-stripped">
+            <table class="table table-stripped table-condensed">
             	<thead>
             		<th>ID</th>
             		<th>N° de Control</th>
