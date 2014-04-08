@@ -23,7 +23,17 @@ Route::get('users', function()
     return View::make('users')->with('users',$users);
 });
 
+//Macros
 
+HTML::macro('navbar_link', function($route, $text) {
+	if( Request::path() == $route ) {
+		$active = "class = 'active'";
+	}
+	else {
+		$active = '';
+	}
+	return '<li ' . $active . '>' . link_to($route, $text) . '</li>';
+});
 
 //Ruta para hacer git pull en servidor desde github.
 Route::any('deploy','UtilidadesController@deploy');

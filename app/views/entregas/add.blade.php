@@ -1,8 +1,7 @@
 @extends('layout.default')
-@extends('includes.entregas_navbar')
-@section('entregas_content')
+@section('content')
 <div class="row">
-	<div class="col-md-9 col-md-offset-1">
+	<div class="col-md-10 col-md-offset-1">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">Agregar Entregas</h3>
@@ -49,5 +48,4 @@
 		</div>
 	</div>
 </div>
-
 @stop

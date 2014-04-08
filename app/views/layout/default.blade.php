@@ -5,10 +5,9 @@
 	</head>
     <body>
         @include('includes.navbar')
-
         <div class="container">
             @include('includes.header')
-            @yield('content')
+            @include('includes.content_switch')
             @include('includes.footer')
         </div>
     </body>
