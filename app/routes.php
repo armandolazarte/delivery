@@ -15,6 +15,7 @@ Route::get('/','HomeController@getIndex');
 Route::controller('ventas','VentasController');
 Route::controller('compras','ComprasController');
 Route::controller('debitos','DebitosController');
+Route::controller('entregas','EntregasController');
 
 Route::get('users', function()
 {
