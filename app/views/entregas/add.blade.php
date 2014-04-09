@@ -7,35 +7,35 @@
 				<h3 class="panel-title">Agregar Entregas</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form" role="form">
+				{{Form::open(array('action'=>'EntregasController@postAdd','class'=>'form'))}}
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" for="entrega_factura"><small>Número de factura</small></label>
-								<input type="number" id="entrega_factura" name="entrega_factura" class="form-control" placeholder="">	
+								<input type="number" id="entrega_factura" name="fact_profit_id" class="form-control" placeholder="">	
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="entrega_cliente"><small>Número de cliente</small></label>			
-								<input type="number" id="entrega_cliente" name="entrega_cliente" class="form-control" placeholder="">	
+								<input type="number" id="entrega_cliente" name="client_profit_id" class="form-control" placeholder="">	
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="entrega_monto"><small>Monto sin IVA</small></label>						
-								<input type="number" id="entrega_monto" name="entrega_monto" class="form-control" placeholder="">			
+								<input type="number" id="entrega_monto" name="monto" class="form-control" placeholder="">			
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="control-label" for="entrega_factura"><small>Fecha de facturación</small></label>
-								<input type="date" id="entrega_factura" name="entrega_factura" class="form-control" placeholder="">	
+								<input type="date" id="entrega_factura" name="fecha_entrega" class="form-control" value="{{\Carbon\Carbon::now()}}" placeholder="">	
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="entrega_chofer"><small>Chofer</small></label>					
-								<select class="form-control" id="entrega_chofer">
-									<option>Jesus David Mastracci</option>
-									<option>Marco Vilera</option>
-									<option>Javier Carvallo</option>
-									<option>Eleazar Guía</option>
-									<option>Mauricio Gonzales</option>
+								<select class="form-control" id="entrega_chofer" name="chofer_id">
+									<option value="1">Jesus David Mastracci</option>
+									<option value="2">Marco Vilera</option>
+									<option value="3">Javier Carvallo</option>
+									<option value="4">Eleazar Guía</option>
+									<option value="5">Mauricio Gonzales</option>
 								</select>						
 							</div>
 							<div class="pull-right">
@@ -43,7 +43,7 @@
 							</div>
 						</div>
 					</div>
-				</form>	
+				{{Form::close()}}
 			</div>
 		</div>
 	</div>
