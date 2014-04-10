@@ -44,14 +44,11 @@
 								<label class="control-label" for="entrega_chofer"><small>Chofer</small></label>					
 								<select class="form-control" id="entrega_chofer" name="chofer_id">
 									<option value="1" @if((isset($data))&&($data['chofer_id']=="1")) selected="selected" @endif>Jesus David Mastracci</option>
-
 									<option value="2" @if((isset($data))&&($data['chofer_id']=="2")) selected="selected" @endif>Marco Vilera</option>
-	
 									<option value="3" @if((isset($data))&&($data['chofer_id']=="3")) selected="selected" @endif>Javier Carvallo</option>
-
 									<option value="4" @if((isset($data))&&($data['chofer_id']=="4")) selected="selected" @endif>Eleazar Guía</option>
-
 									<option value="5" @if((isset($data))&&($data['chofer_id']=="5")) selected="selected" @endif>Mauricio Gonzales</option>
+									<option value="6" @if((isset($data))&&($data['chofer_id']=="6")) selected="selected" @endif>Diego Villalobos</option>
 
 								</select>						
 							</div>

@@ -6,12 +6,12 @@ class EntregasController extends BaseController {
 	public function getIndex(){
 		$data = Entregas::where('active','=','1');
 		$indice = array(
-			1 =>'Diego Villalobos',
-			2 =>'Javier Carvallo',
-			3 =>'Marco Vilera',
-			4 =>'Jesus Mastracci',
-			5 =>'Eleazar Guia',
-			6 =>'Mauricio Gonzales'
+			6 =>'Diego Villalobos',
+			3 =>'Javier Carvallo',
+			2 =>'Marco Vilera',
+			1 =>'Jesus Mastracci',
+			4 =>'Eleazar Guia',
+			5 =>'Mauricio Gonzales'
 		);
 		$meses = array('enero'=>0,'febrero'=>0,'marzo'=>0,'abril'=>0,'mayo'=>0,'junio'=>0,'julio'=>0,'agosto'=>0,'septiembre'=>0,'octubre'=>0,'noviembre'=>0,'diciembre'=>0);
 		$choferes = array(
