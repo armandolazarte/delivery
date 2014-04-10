@@ -1,5 +1,6 @@
 @extends('layout.default')
 @section('content')
+
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
 		<div class="panel panel-default">
@@ -22,6 +23,13 @@
 								<label class="control-label" for="entrega_monto"><small>Monto sin IVA</small></label>						
 								<input type="number" id="entrega_monto" name="monto" class="form-control" placeholder="">			
 							</div>
+							<div class="form-group">
+								<label class="control-label" for="entrega_compania"><small>Compañía</small></label>
+								<select class="form-control" id="entrega_compania" name="compania_id">
+									<option value="1" @if((isset($data))&&($data["compania_id"]=="1")) selected="selected" @endif >Importadora La Villa de las Mascotas</option>
+									<option value="2" @if((isset($data))&&($data["compania_id"]=="2")) selected="selected" @endif>Comercializadora Villas Cat Litle</option>
+								</select>
+							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -35,11 +43,16 @@
 							<div class="form-group">
 								<label class="control-label" for="entrega_chofer"><small>Chofer</small></label>					
 								<select class="form-control" id="entrega_chofer" name="chofer_id">
-									<option value="1">Jesus David Mastracci</option>
-									<option value="2">Marco Vilera</option>
-									<option value="3">Javier Carvallo</option>
-									<option value="4">Eleazar Guía</option>
-									<option value="5">Mauricio Gonzales</option>
+									<option value="1" @if((isset($data))&&($data['chofer_id']=="1")) selected="selected" @endif>Jesus David Mastracci</option>
+
+									<option value="2" @if((isset($data))&&($data['chofer_id']=="2")) selected="selected" @endif>Marco Vilera</option>
+	
+									<option value="3" @if((isset($data))&&($data['chofer_id']=="3")) selected="selected" @endif>Javier Carvallo</option>
+
+									<option value="4" @if((isset($data))&&($data['chofer_id']=="4")) selected="selected" @endif>Eleazar Guía</option>
+
+									<option value="5" @if((isset($data))&&($data['chofer_id']=="5")) selected="selected" @endif>Mauricio Gonzales</option>
+
 								</select>						
 							</div>
 							<div class="pull-right">
