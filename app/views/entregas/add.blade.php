@@ -29,6 +29,10 @@
 								<input type="date" id="entrega_factura" name="fecha_entrega" class="form-control" value="{{\Carbon\Carbon::now()}}" placeholder="">	
 							</div>
 							<div class="form-group">
+								<label class="control-label" for="entrega_tasa"><small>Tasa</small></label>
+								<input type="number" id="entrega_tasa" name="tasa" class="form-control" value="1" placeholder="">	
+							</div>
+							<div class="form-group">
 								<label class="control-label" for="entrega_chofer"><small>Chofer</small></label>					
 								<select class="form-control" id="entrega_chofer" name="chofer_id">
 									<option value="1">Jesus David Mastracci</option>

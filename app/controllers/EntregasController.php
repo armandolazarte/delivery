@@ -23,7 +23,7 @@ class EntregasController extends BaseController {
 				'monto' => Input::get('entrega_monto'),
 				'fecha_entrega' => Input::get('entrega_fecha')
 			);
-			Entregas::create($formdata);
+			Entregas::create(Input::all());
 			return Redirect::to('entregas/add');
 		}else{
 			return Redirect::to('entregas/add')->withErrors($v);

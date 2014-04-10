@@ -2,8 +2,9 @@
 
 class Entregas extends Eloquent {
 	protected $table = 'entregas';
+	protected $fillable = array('fact_profit_id','client_profit_id','chofer_id','tasa','monto','fecha_entrega');
 
-	public static function validate($input){
+	public static function validate($input){	
 		$rules = array(
 			'fact_profit_id' => 'Required|Integer|Min:0',
 			'client_profit_id' => 'Required|Integer|Min:0',
