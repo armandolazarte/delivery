@@ -25,8 +25,8 @@ class Entregas extends Eloquent {
 		return Validator::make($input,$rules,$messages);
 	}
 
-	public static function calcGanancia($chofer_id,$mes,$año){
-		$data = Entregas::where('active','=','1');
+	public static function calcGanancia($chofer_id,$mes,$año,$compania){
+		$data = Entregas::where('active','=','1')->where('compania_id','=',$compania);
 		switch($mes){
 			case 'enero':
 				$data = $data

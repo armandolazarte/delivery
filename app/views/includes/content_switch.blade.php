@@ -19,10 +19,9 @@
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs">
-                {{HTML::navbar_link("entregas/index",'Índice')}}
-                {{HTML::navbar_link("entregas/list",'Listar')}}
-                {{HTML::navbar_link("entregas/add",'Agregar')}}
-                {{HTML::navbar_link("entregas/delete",'Eliminar')}}
+                <li @if(Request::is('entregas/index')) class="active" @endif><a href="{{URL::to('entregas/index')}}">Indice</a></li>
+                <li @if(Request::is('entregas/list')) class="active" @endif><a href="{{URL::to('entregas/list')}}">Lista</a></li>
+                <li @if(Request::is('entregas/add')) class="active" @endif><a href="{{URL::to('entregas/add')}}">Agregar</a></li>
             </ul>
             <div class="panel panel-default" style="margin-top: -1px;">
                 <div class="panel-body">
