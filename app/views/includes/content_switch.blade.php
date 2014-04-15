@@ -1,4 +1,4 @@
-@if ( $errors->count() > 0 )
+@if($errors->count()>0)
     <div class="alert alert-warning alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <p>Ocurrieron los siguientes errores:</p>
@@ -9,7 +9,7 @@
         </ul>
     </div>
 @endif
-@if (isset($data))
+@if(isset($data))
     <div class="alert alert-success alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <p>{{ $data['mensaje'] }}</p>
@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs">
-                <li @if(Request::is('entregas/index')) class="active" @endif><a href="{{URL::to('entregas/index')}}">Indice</a></li>
+                <li @if(Request::is('entregas/tabla')) class="active" @endif><a href="{{URL::to('entregas/tabla')}}">Tabla</a></li>
                 <li @if(Request::is('entregas/list')) class="active" @endif><a href="{{URL::to('entregas/list')}}">Lista</a></li>
                 <li @if(Request::is('entregas/add')) class="active" @endif><a href="{{URL::to('entregas/add')}}">Agregar</a></li>
             </ul>

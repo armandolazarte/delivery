@@ -4,6 +4,10 @@ class EntregasController extends BaseController {
 	protected $layout = "layout.default";
 
 	public function getIndex(){
+		return Redirect::to('entregas/tabla');
+	}
+
+	public function getTabla(){
 		$data = Entregas::where('active','=','1');
 		$indice = array(
 			6 =>'Diego Villalobos',
@@ -15,14 +19,6 @@ class EntregasController extends BaseController {
 		);
 		$compania = array(1,2);
 		$meses = array('enero'=>0,'febrero'=>0,'marzo'=>0,'abril'=>0,'mayo'=>0,'junio'=>0,'julio'=>0,'agosto'=>0,'septiembre'=>0,'octubre'=>0,'noviembre'=>0,'diciembre'=>0);
-		/*$choferes = array(
-			'Diego Villalobos' => $meses,
-			'Javier Carvallo' => $meses,
-			'Marco Vilera' => $meses,
-			'Jesus Mastracci' => $meses,
-			'Eleazar Guia' => $meses,
-			'Mauricio Gonzales' => $meses
-		);*/
 		$choferes = array();
 		foreach($compania as $v){
 			foreach ($indice as $i => $nombre) {
@@ -33,9 +29,8 @@ class EntregasController extends BaseController {
 				$choferes[$v][$nombre]['nombre'] = $nombre;
 			}
 		}
-		
 		View::share('choferes',$choferes);
-		$this->layout->content = View::make('entregas.home');
+		$this->layout->content = View::make('entregas.tabla');
 	}
 
 	public function getAdd(){
