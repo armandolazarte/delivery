@@ -30,7 +30,7 @@ class EntregasController extends BaseController {
 			}
 		}
 		View::share('choferes',$choferes);
-		$this->layout->content = View::make('entregas.tabla');
+		return $this->layout->content = View::make('entregas.tabla');
 	}
 
 	public function getAdd(){

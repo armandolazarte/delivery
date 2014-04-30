@@ -16,7 +16,7 @@ Route::controller('ventas','VentasController');
 Route::controller('compras','ComprasController');
 Route::controller('debitos','DebitosController');
 Route::controller('entregas','EntregasController');
-
+Route::controller('retenciones','RetencionesController');
 Route::get('users', function()
 {
     $users = User::all();
