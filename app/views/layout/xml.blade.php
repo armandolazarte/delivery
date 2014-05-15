@@ -1,3 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<relacionISLR RIFAGENTE="j296305390">
-</relacionISLR>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RelacionRetencionesISLR RifAgente="j296305390">
+</RelacionRetencionesISLR>
