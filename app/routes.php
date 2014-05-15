@@ -16,7 +16,9 @@ Route::controller('ventas','VentasController');
 Route::controller('compras','ComprasController');
 Route::controller('debitos','DebitosController');
 Route::controller('entregas','EntregasController');
-Route::controller('retenciones','RetencionesController');
+Route::resource('iva','IvaController');
+Route::resource('islr','ISLRController');
+
 Route::get('users', function()
 {
     $users = User::all();
