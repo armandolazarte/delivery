@@ -11,5 +11,10 @@ class RetencionesController extends BaseController {
 		return Response::download(storage_path().'/file.xml', 'file.xml', $headers);
 		//return Response::make($content, 200)->header('Content-Type','application/xml');
 	}
+
+	public function getaddISLR(){
+		protected $layout = 'layout.default';
+		return $this->layout->content = View::make('retenciones.add');
+	}
 }
 ?>

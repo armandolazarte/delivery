@@ -34,7 +34,7 @@ class EntregasController extends BaseController {
 	}
 
 	public function getAdd(){
-		$this->layout->content = View::make('entregas.add');
+		$this->layout->main = View::make('entregas.add');
 	}
 
 	public function getList($chofer = null){
