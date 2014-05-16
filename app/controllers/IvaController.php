@@ -1,5 +1,4 @@
 <?php
-
 class IvaController extends \BaseController {
 	protected $layout = 'layout.default';
 

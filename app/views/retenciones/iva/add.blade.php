@@ -9,9 +9,19 @@
 				{{Form::open(array('action'=>'IvaController@store','class'=>'form'))}}
 					<div class="row">
 						<div class="col-md-6">
-							<div class="form-group">
-								<label class="control-label" for="iva_rif_beneficiario"><small>RIF del Beneficiario</small></label>
-								<input type="text" id="iva_rif_beneficiario" name="rif_beneficiario" class="form-control" placeholder="Ejemplo: J296305390">	
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="iva_rif_beneficiario"><small>RIF del Beneficiario</small></label>
+										<input type="text" id="iva_rif_beneficiario" name="rif_beneficiario" class="form-control" placeholder="Ejemplo: J296305390">	
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="iva_date_fact"><small>Fecha de facturación</small></label>
+										<input type="date" id="iva_date_fact" name="date_fact" class="form-control" value="" placeholder="Ejemplo: 01/12/1984">	
+									</div>
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -41,19 +51,21 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label" for="iva_date_fact"><small>Fecha de facturación</small></label>
-								<input type="date" id="iva_date_fact" name="date_fact" class="form-control" value="" placeholder="Ejemplo: 01/12/1984">	
-							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="form-group">
-								<label class="control-label" for="iva_rif_agente"><small>RIF Agente de Retencion</small></label>
-								<input type="text" id="iva_rif_agente" name="rif_agente" class="form-control" placeholder="" value="J296305390">	
-							</div>
-							<div class="form-group">
-								<label class="control-label" for="iva_comprobante"><small>Número de comprobante</small></label>
-								<input type="number" id="iva_comprobante" name="numero_comprobante" class="form-control" placeholder="">	
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="iva_rif_agente"><small>RIF Agente de Retencion</small></label>
+										<input type="text" id="iva_rif_agente" name="rif_agente" class="form-control" placeholder="" value="J296305390">	
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="iva_comprobante"><small>Número de comprobante</small></label>
+										<input type="number" id="iva_comprobante" name="numero_comprobante" class="form-control" placeholder="">	
+									</div>
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
