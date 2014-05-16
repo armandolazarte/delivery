@@ -81,13 +81,18 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label" for="iva_base_imponible"><small>Base imponible</small></label>
-								<input type="number" id="iva_base_imponible" name="base_imponible" class="form-control" placeholder="">	
-							</div>
-
-							<div class="pull-right">
-								<button type="submit" class="btn btn-primary">Guardar</button>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label" for="iva_base_imponible"><small>Base imponible</small></label>
+										<input type="number" id="iva_base_imponible" name="base_imponible" class="form-control" placeholder="">	
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="pull-right">
+										<button type="submit" class="btn btn-primary">Guardar</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
