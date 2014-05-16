@@ -63,7 +63,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label" for="iva_comprobante"><small>Número de comprobante</small></label>
-										<input type="number" id="iva_comprobante" name="numero_comprobante" class="form-control" placeholder="">	
+										<input type="text" id="iva_comprobante" name="numero_comprobante" class="form-control" placeholder="Ejemplo: 20140100001234">	
 									</div>
 								</div>
 							</div>
@@ -71,13 +71,13 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label" for="iva_alicuota"><small>Tasa IVA</small></label>
-										<input type="number" id="iva_alicuota" name="tasa_iva" class="form-control" placeholder="">	
+										<input type="text" id="iva_alicuota" name="tasa_iva" class="form-control" placeholder="Ejemplo: 12" value="12">	
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label" for="iva_tasa_retencion"><small>Tasa Retencion</small></label>
-										<input type="number" id="iva_tasa_retencion" name="tasa_retencion" class="form-control" placeholder="">	
+										<input type="text" id="iva_tasa_retencion" name="tasa_retencion" class="form-control" placeholder="Ejemplo: 75" value="75">	
 									</div>
 								</div>
 							</div>
@@ -85,14 +85,15 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label" for="iva_base_imponible"><small>Base imponible</small></label>
-										<input type="number" id="iva_base_imponible" name="base_imponible" class="form-control" placeholder="">	
+										<input type="text" id="iva_base_imponible" name="base_imponible" class="form-control" placeholder="Ejemplo: 10123,34">	
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="pull-right">
-										<button type="submit" class="btn btn-primary">Guardar</button>
-									</div>
+									
 								</div>
+							</div>
+							<div class="pull-right">
+								<button type="submit" class="btn btn-primary">Guardar</button>
 							</div>
 						</div>
 					</div>
