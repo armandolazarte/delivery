@@ -20,7 +20,7 @@ class IvaController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$this->layout->content = View::make('retenciones.iva.add');//
 	}
 
 	/**

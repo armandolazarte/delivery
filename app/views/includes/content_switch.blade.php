@@ -30,6 +30,21 @@
             </div>
         </div>
     </div>
+@elseif(Request::is('iva*'))
+     <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <li @if(Request::is('iva/index') || Request::is('iva') ) class="active" @endif><a href="{{URL::to('iva/index')}}">Lista</a></li>
+                <li @if(Request::is('iva/create')) class="active" @endif><a href="{{URL::to('iva/create')}}">Agregar</a></li>
+                <li @if(Request::is('iva/edit')) class="active" @endif><a href="{{URL::to('iva/edit')}}">Editar</a></li>
+            </ul>
+            <div class="panel panel-default" style="margin-top: -1px;">
+                <div class="panel-body">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+    </div>
 @else
     @yield('content')
 @endif
