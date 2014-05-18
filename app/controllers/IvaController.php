@@ -29,7 +29,7 @@ class IvaController extends \BaseController {
 	 */
 	public function store()
 	{
-		var_dump(Input::all());
+		print_r(Input::all());
 	}
 
 	/**
