@@ -29,7 +29,30 @@ class IvaController extends \BaseController {
 	 */
 	public function store()
 	{
-		print_r(Input::all());
+		if(is_array(Input::all())){
+			$inputArray = Input::all();
+			$ivaData = array(
+				'rif_beneficiario' => $inputArray['rif_beneficiario'],
+				'periodo' => $inputArray['year'].$inputArray['month'],
+				'fecha_facturacion' => $inputArray['date_fact'],
+				'nro_factura' => $inputArray['nro_factura'],
+				'nro_control' => $inputArray['nro_control'],
+				'monto_base' => $inputArray['base_imponible'],
+				'iva_retenido' => ($inputArray['base_imponible']*$inputArray['tasa_iva']*$inputArray['tasa_retencion'])/10000,
+				'monto_total' => $inputArray['base_imponible']+($inputArray['base_imponible']*$inputArray['tasa_iva'])/100,
+				'monto_exento' => 0,
+				'nro_nota_credito' => 0,
+				'alicuota' => $inputArray['tasa_iva'],
+				'tipo_operacion' => 'c',
+				'id_comprobante' => $inputArray['numero_comprobante']
+			);
+			$v = Iva::validate($ivaData);
+			if($v->passes()){
+				print_r($ivaData);
+			}else{
+				var_dump('algo salio mal');
+			}
+		}
 	}
 
 	/**
