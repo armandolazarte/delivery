@@ -18,11 +18,11 @@ class Iva extends Eloquent{
 		);
 
 		$rules = array(
-			'rif_beneficiario' => 'Required|alpha_num|size:10|Regex:[JVG][0-9]{9}',
+			'rif_beneficiario' => 'Required|alpha_num|size:10|Regex:/[JVG][0-9]{9}/',
 			'periodo' => 'Required|Integer|Min:0',
 			'fecha_facturacion' => 'Required|Date',
 			'nro_factura' => 'Required|Integer|Min:0',
-			'nro_control' => 'Required|Regex:[0-9]{2}[-][0-9]{1,10}',
+			'nro_control' => 'Required|Regex:/[0-9]{2}[-][0-9]{1,10}/',
 			'monto_base' => 'Required|Numeric|Min:0',
 			'monto_total' => 'Required|Numeric|Min:0',
 			'iva_retenido' => 'Required|Numeric|Min:0',
@@ -30,7 +30,7 @@ class Iva extends Eloquent{
 			'monto_exento' => 'Required|Numeric|Min:0',
 			'alicuota' => 'Required|Integer|Min:0|Max:100',
 			'tipo_operacion' => 'Required',
-			'id_comprobante' => array('Required','Regex:[2][0][0-9]{2}(([0]\d)|([1][0-2]))[0-9]{8}','Unique:Iva')
+			'id_comprobante' => array('Required','Regex:/[2][0][0-9]{2}(([0]\d)|([1][0-2]))[0-9]{8}/','Unique:Iva')
 		);
 		return Validator::make($input,$rules,$messages);
 	}
