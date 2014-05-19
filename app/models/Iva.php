@@ -18,7 +18,7 @@ class Iva extends Eloquent{
 		);
 
 		$rules = array(
-			'rif_beneficiario' => 'Required|alpha_num|size:10|regex:[JVG][0-9]{9}',
+			'rif_beneficiario' => 'Required|alpha_num|size:10|Regex:[JVG][0-9]{9}',
 			'periodo' => 'Required|Integer|Min:0',
 			'fecha_facturacion' => 'Required|Date',
 			'nro_factura' => 'Required|Integer|Min:0',
