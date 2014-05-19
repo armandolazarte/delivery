@@ -50,8 +50,10 @@ class IvaController extends \BaseController {
 			if($v->passes()){
 				print_r($ivaData);
 			}else{
-
-				return Redirect::to('iva/create')->withErrors($v)->withInput();
+				if(Input::flash()){
+				return Redirect::to('iva/create')->withErrors($v)->withInput();	
+				}
+				
 			}
 		}
 	}
