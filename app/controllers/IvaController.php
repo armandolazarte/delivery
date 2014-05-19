@@ -50,7 +50,7 @@ class IvaController extends \BaseController {
 			if($v->passes()){
 				print_r($ivaData);
 			}else{
-				var_dump('algo salio mal');
+				return Redirect::to('iva/create')->withErrors($v);
 			}
 		}
 	}
