@@ -32,6 +32,8 @@ class IvaController extends \BaseController {
 		if(is_array(Input::all())){
 			$inputArray = Input::all();
 			$ivaData = array(
+				'rif_agente' => $inputArray['rif_agente'],
+				'beneficiario_nombre' => $inputArray['beneficiario_nombre'],
 				'rif_beneficiario' => $inputArray['rif_beneficiario'],
 				'periodo' => $inputArray['year'].$inputArray['month'],
 				'fecha_facturacion' => $inputArray['date_fact'],
@@ -48,7 +50,8 @@ class IvaController extends \BaseController {
 			);
 			$v = Iva::validate($ivaData);
 			if($v->passes()){
-				return Redirect::to('iva/create');
+
+				return Redirect::to('iva/create')->with('ivaSuccess',true);
 			}else{
 				return Redirect::to('iva/create')->withErrors($v)->withInput();
 			}
@@ -63,7 +66,7 @@ class IvaController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$this->layout->content = View::make('retenciones.iva.show');
 	}
 
 	/**

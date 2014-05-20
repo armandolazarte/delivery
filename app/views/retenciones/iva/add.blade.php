@@ -9,6 +9,10 @@
 				{{Form::open(array('action'=>'IvaController@store','class'=>'form'))}}
 					<div class="row">
 						<div class="col-md-6">
+							<div @if($errors->has('beneficiarion_nombre')) class="form-group has-error" @else class="form-group" @endif>
+								<label class="control-label" for="iva_beneficiarion_nombre"><small>Nombre del Beneficiario</small></label>
+								<input type="text" id='iva_beneficiarion_nombre' name="beneficiario_nombre" class="form-control" placeholder="Ejemplo: Superpet shop, C.A." value={{{ Input::old('beneficiario_nombre') }}}>
+							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div @if($errors->has('rif_beneficiario')) class="form-group has-error" @else class="form-group" @endif>
