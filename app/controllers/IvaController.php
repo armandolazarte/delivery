@@ -48,7 +48,7 @@ class IvaController extends \BaseController {
 			);
 			$v = Iva::validate($ivaData);
 			if($v->passes()){
-				print_r($ivaData);
+				return Redirect::to('iva/create');
 			}else{
 				return Redirect::to('iva/create')->withErrors($v)->withInput();
 			}
