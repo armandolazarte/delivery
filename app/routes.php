@@ -18,7 +18,7 @@ Route::controller('debitos','DebitosController');
 Route::controller('entregas','EntregasController');
 Route::resource('iva','IvaController');
 Route::resource('islr','ISLRController');
-
+Route::get('pdf','IvaController@pdf');
 Route::get('users', function()
 {
     $users = User::all();

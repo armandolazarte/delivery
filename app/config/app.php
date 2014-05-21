@@ -106,8 +106,10 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Barryvdh\Snappy\ServiceProvider',
 		//'Barryvdh\Debugbar\ServiceProvider',
-		'Thujohn\Pdf\PdfServiceProvider',
+		//'Thujohn\Pdf\PdfServiceProvider',
+		//'Barryvdh\DomPDF\ServiceProvider',
 
 	),
 
@@ -174,7 +176,10 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'PDF'			  => 'Thujohn\Pdf\PdfFacade',
+		//'PDF' => 'Barryvdh\DomPDF\Facade',
+		//'PDF' => 'Thujohn\Pdf\PdfFacade',
+		'PDF' => 'Barryvdh\Snappy\Facades\SnappyPdf',
+		'Image' => 'Barryvdh\Snappy\Facades\SnappyImage',
 
 	),
 

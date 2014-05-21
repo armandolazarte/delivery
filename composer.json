@@ -6,7 +6,10 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"barryvdh/laravel-debugbar": "dev-master",
-		"thujohn/pdf": "dev-master"
+		"h4cc/wkhtmltopdf-amd64": "0.12.x",
+        "h4cc/wkhtmltoimage-amd64": "0.12.x",
+		"knplabs/knp-snappy": "*",
+		"barryvdh/laravel-snappy": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

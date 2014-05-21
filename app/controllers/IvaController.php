@@ -12,6 +12,16 @@ class IvaController extends \BaseController {
 		//
 	}
 
+	public function pdf()
+	{
+		$vista = View::make('retenciones.iva.show');
+		//return PDF::load($vista, 'letter', 'portrait')->download('pdf.pdf');
+		//$pdf->loadHTML($vista);
+		//return $pdf->stream();
+		$pdf = PDF::loadView('retenciones.iva.show');
+		return $pdf->download('invoice.pdf');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

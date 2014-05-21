@@ -1,4 +1,11 @@
-@section('content')
+<!doctype html>
+<html language="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+
 <div class="row">
 	<div class="col-md-6">
 		<div class="row">
@@ -69,6 +76,7 @@
 		<div class="col-md-12">
 			<table class="table table-condensed table-bordered table-striped">
 				<thead>
+				<tr>
 					<th class="text-center"><small>#</small></th>
 					<th class="text-center"><small>Fecha Factura</small></th>
 					<th class="text-center"><small>Número Factura</small></th>
@@ -80,6 +88,7 @@
 					<th class="text-center"><small>Alicuota</small></th>
 					<th class="text-center"><small>IVA</small></th>
 					<th class="text-center"><small>IVA Retenido</small></th>
+					</tr>
 				</thead>
 				<tbody>
 					<tr class="text-center">
@@ -102,4 +111,5 @@
 		</div>
 	</div>
 </div>
-@stop
+</body>
+</html>
