@@ -1,15 +1,10 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		@include('includes.head')
-	</head>
+    <head>
+        @include('includes.head')
+    </head>
     <body>
-        @include('includes.navbar')
-        <div class="container">
-            @include('includes.header')
-            @include('includes.content_switch')
-            @include('includes.footer')
-        </div>
+    	@include('managers.contentManager')
     </body>
     @include('includes.js')
 </html>

@@ -176,10 +176,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		//'PDF' => 'Barryvdh\DomPDF\Facade',
-		//'PDF' => 'Thujohn\Pdf\PdfFacade',
-		'PDF' => 'Barryvdh\Snappy\Facades\SnappyPdf',
-		'Image' => 'Barryvdh\Snappy\Facades\SnappyImage',
+		'PDF'			  => 'Barryvdh\Snappy\Facades\SnappyPdf',
+		'Image' 		  => 'Barryvdh\Snappy\Facades\SnappyImage',
 
 	),
 

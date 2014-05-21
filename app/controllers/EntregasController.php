@@ -1,7 +1,5 @@
 <?php 
 class EntregasController extends BaseController {
-	
-	protected $layout = "layout.default";
 
 	public function getIndex(){
 		return Redirect::to('entregas/tabla');
@@ -30,11 +28,11 @@ class EntregasController extends BaseController {
 			}
 		}
 		View::share('choferes',$choferes);
-		return $this->layout->content = View::make('entregas.tabla');
+		return View::make('entregas.tabla');
 	}
 
 	public function getAdd(){
-		$this->layout->content = View::make('entregas.add');
+		return View::make('entregas.add');
 	}
 
 	public function getList($chofer = null){
@@ -42,7 +40,7 @@ class EntregasController extends BaseController {
 		$data = $data->orderBy('fecha_entrega','desc');
 		$data = $data->paginate(10);
 		View::share('items',$data);
-		$this->layout->content = View::make('entregas.list');
+		return View::make('entregas.list');
 	}
 
 	public function postAdd(){
@@ -59,9 +57,8 @@ class EntregasController extends BaseController {
 			);
 			Entregas::create(Input::all());
 			$formData['mensaje'] = 'Se creó exitosamente la entrega de la factura número: '.$formData['fact_profit_id'];
-			//$this->layout->with('data',$formData);
 			View::share('data',$formData);
-			$this->layout->content = View::make('entregas.add');
+			return View::make('entregas.add');
 		}else{
 			return Redirect::to('entregas/add')->withErrors($v);
 		}

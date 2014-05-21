@@ -1,6 +1,5 @@
 <?php
 class IvaController extends \BaseController {
-	protected $layout = 'layout.default';
 
 	/**
 	 * Display a listing of the resource.
@@ -9,17 +8,24 @@ class IvaController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('retenciones.iva.show');
 	}
 
 	public function pdf()
 	{
-		$vista = View::make('retenciones.iva.show');
+		
 		//return PDF::load($vista, 'letter', 'portrait')->download('pdf.pdf');
 		//$pdf->loadHTML($vista);
 		//return $pdf->stream();
-		$pdf = PDF::loadView('retenciones.iva.show');
-		return $pdf->download('invoice.pdf');
+		//$pdf = PDF::loadHTML($vista);
+		//return $pdf->stream();
+
+		return PDF::loadView('retenciones.iva.show')->setPaper('letter')->setOrientation('portrait')->setOptions(array(
+			'disable-smart-shrinking'	=> 	null,
+			'lowquality' => null,
+			'enable-javascript' => true,
+			'dpi' => 200
+			))->stream();
 	}
 
 	/**
@@ -29,7 +35,7 @@ class IvaController extends \BaseController {
 	 */
 	public function create()
 	{
-		$this->layout->content = View::make('retenciones.iva.add');//
+		return View::make('retenciones.iva.add');//
 	}
 
 	/**
@@ -60,7 +66,6 @@ class IvaController extends \BaseController {
 			);
 			$v = Iva::validate($ivaData);
 			if($v->passes()){
-
 				return Redirect::to('iva/create')->with('ivaSuccess',true);
 			}else{
 				return Redirect::to('iva/create')->withErrors($v)->withInput();
@@ -76,7 +81,7 @@ class IvaController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$this->layout->content = View::make('retenciones.iva.show');
+		return View::make('retenciones.iva.show');
 	}
 
 	/**
