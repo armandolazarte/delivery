@@ -27,7 +27,7 @@ class CreacionIva extends Migration {
 			$table->float('monto_exento');
 			$table->float('alicuota');
 			$table->string('tipo_operacion');
-			$table->integer('id_comprobante')->unsigned();
+			$table->string('id_comprobante');
 		});
 	}
 

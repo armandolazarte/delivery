@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddEntregasMonto' => $baseDir . '/app/database/migrations/2014_04_09_141556_add_entregas_monto.php',
+    'Addtimestamps' => $baseDir . '/app/database/migrations/2014_05_22_173814_addtimestamps.php',
     'AgregarCamposIva' => $baseDir . '/app/database/migrations/2014_05_20_115541_agregar_campos_iva.php',
     'AñadirCompaniaId' => $baseDir . '/app/database/migrations/2014_04_10_134141_añadir_compania_id.php',
     'Barryvdh\\Debugbar\\Console\\ClearCommand' => $vendorDir . '/barryvdh/laravel-debugbar/src/Barryvdh/Debugbar/Console/ClearCommand.php',

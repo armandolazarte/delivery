@@ -8,18 +8,13 @@ class IvaController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('retenciones.iva.show');
+		$data = Iva::orderBy('created_at','desc');
+		$data = $data->paginate(10);
+		return View::make('retenciones.iva.index')->with('tabla_iva',$data);
 	}
 
-	public function pdf()
+	public function pdf($id)
 	{
-		
-		//return PDF::load($vista, 'letter', 'portrait')->download('pdf.pdf');
-		//$pdf->loadHTML($vista);
-		//return $pdf->stream();
-		//$pdf = PDF::loadHTML($vista);
-		//return $pdf->stream();
-
 		return PDF::loadView('retenciones.iva.show')->setPaper('letter')->setOrientation('portrait')->setOptions(array(
 			'disable-smart-shrinking'	=> 	null,
 			'lowquality' => null,
@@ -48,11 +43,11 @@ class IvaController extends \BaseController {
 		if(is_array(Input::all())){
 			$inputArray = Input::all();
 			$ivaData = array(
-				'rif_agente' => $inputArray['rif_agente'],
-				'beneficiario_nombre' => $inputArray['beneficiario_nombre'],
-				'rif_beneficiario' => $inputArray['rif_beneficiario'],
+				'agente_rif' => strtoupper($inputArray['rif_agente']),
+				'beneficiario_nombre' => strtoupper($inputArray['beneficiario_nombre']),
+				'rif_beneficiario' => strtoupper($inputArray['rif_beneficiario']),
 				'periodo' => $inputArray['year'].$inputArray['month'],
-				'fecha_facturacion' => $inputArray['date_fact'],
+				'fecha_facturacion' => date("Y-m-d",strtotime($inputArray['date_fact'])),
 				'nro_factura' => $inputArray['nro_factura'],
 				'nro_control' => $inputArray['nro_control'],
 				'monto_base' => $inputArray['base_imponible'],
@@ -66,6 +61,7 @@ class IvaController extends \BaseController {
 			);
 			$v = Iva::validate($ivaData);
 			if($v->passes()){
+				Iva::create($ivaData);
 				return Redirect::to('iva/create')->with('ivaSuccess',true);
 			}else{
 				return Redirect::to('iva/create')->withErrors($v)->withInput();
@@ -81,7 +77,13 @@ class IvaController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('retenciones.iva.show');
+		if(isset($id)&&($id>0)){
+			$data = Iva::find($id);
+			return View::make('retenciones.iva.show')->with('ivaRetencionData',$data);	
+		}else{
+			return dd($id);
+		}
+		
 	}
 
 	/**

@@ -2,7 +2,7 @@
 
 class Iva extends Eloquent{
 	protected $table = 'iva';
-	protected $fillable = array('beneficiarion_nombre','rif_agente','rif_beneficiario','periodo','fecha_facturacion','nro_factura','nro_control',
+	protected $fillable = array('beneficiario_nombre','agente_rif','rif_beneficiario','periodo','fecha_facturacion','nro_factura','nro_control',
 		'monto_total','monto_base','iva_retenido','nro_nota_credito','monto_exento','alicuota','tipo_operacion','id_comprobante');
 
 	public static function validate($input){	
@@ -19,11 +19,11 @@ class Iva extends Eloquent{
 
 		$rules = array(
 			'beneficiario_nombre' => 'Required',
-			'rif_agente' => 'Required|alpha_num|size:10|Regex:/[JVG][0-9]{9}/',
+			'agente_rif' => 'Required|alpha_num|size:10|Regex:/[JVG][0-9]{9}/',
 			'rif_beneficiario' => 'Required|alpha_num|size:10|Regex:/[JVG][0-9]{9}/',
 			'periodo' => array('Required','Regex:/[2][0][0-9]{2}(([0][1-9])|[1][0-2])/'),
 			'fecha_facturacion' => 'Required|Date',
-			'nro_factura' => 'Required|Integer|Min:0',
+			'nro_factura' => 'Required|Numeric|Min:0',
 			'nro_control' => 'Required|Regex:/[0-9]{2}[-][0-9]{1,10}/',
 			'monto_base' => 'Required|Numeric|Min:0',
 			'monto_total' => 'Required|Numeric|Min:0',
