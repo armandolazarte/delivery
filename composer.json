@@ -12,6 +12,9 @@
 		"barryvdh/laravel-snappy": "dev-master"
 	},
 	"autoload": {
+		"psr-0": {
+			"Marquioni": "app/"
+		},
 		"classmap": [
 			"app/commands",
 			"app/controllers",
