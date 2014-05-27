@@ -1,9 +1,9 @@
 <?php
-Use Marquioni\Iva\IvaRepositoryInterface;
+Use Marquioni\Repositories\Resources\IvaRepository;
 
 class IvaController extends \BaseController {
 
-	public function __construct(IvaRepositoryInterface $iva){
+	public function __construct(IvaRepository $iva){
 		$this->iva = $iva;
 	}
 
@@ -14,7 +14,7 @@ class IvaController extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = $this->iva->paginateAll(10);
+		$data = $this->iva->paginateOrderedByCreated(10);
 		return View::make('retenciones.iva.index')->with('tabla_iva',$data);
 	}
 

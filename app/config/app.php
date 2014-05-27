@@ -110,7 +110,7 @@ return array(
 		//'Barryvdh\Debugbar\ServiceProvider',
 		//'Thujohn\Pdf\PdfServiceProvider',
 		//'Barryvdh\DomPDF\ServiceProvider',
-		'Marquioni\Iva\IvaServiceProvider'
+		'Marquioni\Providers\IvaServiceProvider'
 
 	),
 
