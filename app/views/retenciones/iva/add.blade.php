@@ -24,7 +24,7 @@
 								<div class="col-md-6">
 									<div @if($errors->has('fecha_facturacion')) class="form-group has-error" @else class="form-group" @endif>
 										<label class="control-label" for="iva_date_fact"><small>Fecha de facturación</small></label>
-										<input type="date" id="iva_date_fact" name="date_fact" class="form-control" placeholder="Ejemplo: 01/12/1984" @if($errors->count()>0) value="{{{ Input::old('date_fact') }}}" @endif>	
+										<input type="date" id="iva_date_fact" name="fecha_facturacion" class="form-control" placeholder="Ejemplo: 01/12/2014" @if($errors->count()>0) value="{{{ Input::old('date_fact') }}}" @endif>	
 									</div>
 								</div>
 							</div>
@@ -62,13 +62,13 @@
 								<div class="col-md-6">
 									<div @if($errors->has('rif_agente')) class="form-group has-error" @else class="form-group" @endif>
 										<label class="control-label" for="iva_rif_agente"><small>RIF Agente de Retencion</small></label>
-										<input type="text" id="iva_rif_agente" name="rif_agente" class="form-control" placeholder="" @if($errors->count()>0) value="{{{ Input::old('rif_agente') }}}" @else value="J296305390" @endif>	
+										<input type="text" id="iva_rif_agente" name="agente_rif" class="form-control" placeholder="" @if($errors->count()>0) value="{{{ Input::old('agente_rif') }}}" @else value="J296305390" @endif>	
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div @if($errors->has('id_comprobante')) class="form-group has-error" @else class="form-group" @endif>
 										<label class="control-label" for="iva_comprobante"><small>Número de comprobante</small></label>
-										<input type="text" id="iva_comprobante" name="numero_comprobante" class="form-control" placeholder="Ejemplo: 20140100001234" @if($errors->count()>0) value="{{{ Input::old('numero_comprobante') }}}" @endif>
+										<input type="text" id="iva_comprobante" name="id_comprobante" class="form-control" placeholder="Ejemplo: 20140100001234" @if($errors->count()>0) value="{{{ Input::old('id_comprobante') }}}" @endif>
 									</div>
 								</div>
 							</div>
@@ -76,7 +76,7 @@
 								<div class="col-md-6">
 									<div @if($errors->has('alicuota')) class="form-group has-error" @else class="form-group" @endif>
 										<label class="control-label" for="iva_alicuota"><small>Tasa IVA</small></label>
-										<input type="text" id="iva_alicuota" name="tasa_iva" class ="form-control" placeholder="Ejemplo: 12" @if($errors->has('alicuota')) value="{{{ Input::old('tasa_iva') }}}" @else value="12" @endif>	
+										<input type="text" id="iva_alicuota" name="alicuota" class ="form-control" placeholder="Ejemplo: 12" @if($errors->has('alicuota')) value="{{{ Input::old('alicuota') }}}" @else value="12" @endif>	
 									</div>
 								</div>
 								<div class="col-md-6">
@@ -90,7 +90,7 @@
 								<div class="col-md-6">
 									<div @if($errors->has('monto_base')) class="form-group has-error" @else class="form-group" @endif>
 										<label class="control-label" for="iva_base_imponible"><small>Base imponible</small></label>
-										<input type="text" id="iva_base_imponible" name="base_imponible" class="form-control" placeholder="Ejemplo: 10123,34" @if($errors->count()>0) value="{{{ Input::old('base_imponible') }}}" @else value"12" @endif>	
+										<input type="text" id="iva_base_imponible" name="monto_base" class="form-control" placeholder="Ejemplo: 10123,34" @if($errors->count()>0) value="{{{ Input::old('monto_base') }}}" @else value"12" @endif>	
 									</div>
 								</div>
 							</div>

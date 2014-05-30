@@ -1,10 +1,11 @@
 <?php
-Use Marquioni\Repositories\Resources\IvaRepository;
+
 
 class IvaController extends \BaseController {
 
-	public function __construct(IvaRepository $iva){
+	public function __construct(IvaRepository $iva, IvaProcess $proceso){
 		$this->iva = $iva;
+		$this->metodos = $proceso;
 	}
 
 	/**
@@ -14,7 +15,7 @@ class IvaController extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = $this->iva->paginateOrderedByCreated(10);
+		$data = $this->iva->paginarTodos(10);
 		return View::make('retenciones.iva.index')->with('tabla_iva',$data);
 	}
 
@@ -46,27 +47,8 @@ class IvaController extends \BaseController {
 	public function store()
 	{
 		if(is_array(Input::all())){
-			$inputArray = Input::all();
-			$ivaData = array(
-				'agente_rif' => strtoupper($inputArray['rif_agente']),
-				'beneficiario_nombre' => strtoupper($inputArray['beneficiario_nombre']),
-				'rif_beneficiario' => strtoupper($inputArray['rif_beneficiario']),
-				'periodo' => $inputArray['year'].$inputArray['month'],
-				'fecha_facturacion' => date("Y-m-d",strtotime($inputArray['date_fact'])),
-				'nro_factura' => $inputArray['nro_factura'],
-				'nro_control' => $inputArray['nro_control'],
-				'monto_base' => $inputArray['base_imponible'],
-				'iva_retenido' => ($inputArray['base_imponible']*$inputArray['tasa_iva']*$inputArray['tasa_retencion'])/10000,
-				'monto_total' => $inputArray['base_imponible']+($inputArray['base_imponible']*$inputArray['tasa_iva'])/100,
-				'monto_exento' => 0,
-				'nro_nota_credito' => 0,
-				'alicuota' => $inputArray['tasa_iva'],
-				'tipo_operacion' => 'c',
-				'id_comprobante' => $inputArray['numero_comprobante']
-			);
-			$v = Iva::validate($ivaData);
+			$v = $this->metodo->crearRegistro(Input::all());
 			if($v->passes()){
-				Iva::create($ivaData);
 				return Redirect::to('iva/create')->with('ivaSuccess',true);
 			}else{
 				return Redirect::to('iva/create')->withErrors($v)->withInput();
@@ -83,7 +65,7 @@ class IvaController extends \BaseController {
 	public function show($id)
 	{
 		if(isset($id)&&($id>0)){
-			$data = Iva::find($id);
+			$data = $this->iva->buscarPorId($id);
 			return View::make('retenciones.iva.show')->with('ivaRetencionData',$data);	
 		}else{
 			return dd($id);

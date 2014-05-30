@@ -16,7 +16,7 @@ class EloquentIvaRepository implements IvaRepository {
 	* getAll(): Devuelve todas las entradas de la tabla.
 	* @return iva
 	**/
-	public function getAll(){
+	public function obtenerTodos(){
 		return $this->iva->all();
 	}
 
@@ -25,30 +25,30 @@ class EloquentIvaRepository implements IvaRepository {
 	* @param int $id ID correspondiente a la entrada que se busca en la tabla.
 	* @return iva
 	**/
-	public function findById($id=null){
-		if(is_null($id)){
-			throw new NotFoundException;
-		}else{
-			return $this->iva->find($id);
-		}
+	public function buscarPorId($id){
+		return $this->iva->find($id);
 	}
 
 	/**
 	* createOrUpdate($input): Crea una nueva entrada o actualiza una existente en la tabla.
 	* @param int $id ID correspondiente a la entrada que se busca en la tabla.
-	* @return bool
+	* @return object Model::validate
 	**/
-	public function createOrUpdate($input=null){
-		if(is_null($input->id)){
-			//crear una nueva entrada
-		}else{
-			//Actualizar una entrada.
+	public function crear($input){
+		if(is_array($input)){
+			return $this->iva->create($input);
 		}
-		return $this->iva->all();
 	}
 
-	public function paginateOrderedByCreated($perPage) {
-		return $this->iva->orderBy('created_at','desc')->paginate($perPage);
+	public function validar($input){
+		if(is_array($input)){
+			return $this->iva->validate($input);
+		}
+	}
+
+	public function paginarTodos($perPage){
+		$result = $this->iva->orderBy('created_at','desc')->paginate($perPage);
+		return $result;
 	}
 }
 ?>
