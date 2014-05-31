@@ -40,12 +40,6 @@ class EloquentIvaRepository implements IvaRepository {
 		}
 	}
 
-	public function validar($input){
-		if(is_array($input)){
-			return $this->iva->validate($input);
-		}
-	}
-
 	public function paginarTodos($perPage){
 		$result = $this->iva->orderBy('created_at','desc')->paginate($perPage);
 		return $result;
