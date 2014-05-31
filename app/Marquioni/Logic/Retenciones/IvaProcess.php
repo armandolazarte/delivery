@@ -34,7 +34,7 @@ class IvaProcess implements IvaProcessInterface {
 		$v = $this->validarDatosRegistro($data);
 		if($this->validarSuccess())
 		{
-			$iva->crear($input);
+			$iva->crear($data);
 		}
 		return $v;
 	}
