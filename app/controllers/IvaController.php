@@ -47,7 +47,7 @@ class IvaController extends \BaseController {
 	public function store()
 	{
 		if(is_array(Input::all())){
-			$v = $this->metodo->crearRegistro(Input::all());
+			$v = $this->metodos->crearRegistro(Input::all());
 			if($v->passes()){
 				return Redirect::to('iva/create')->with('ivaSuccess',true);
 			}else{
