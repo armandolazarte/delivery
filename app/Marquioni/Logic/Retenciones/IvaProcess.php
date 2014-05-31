@@ -24,7 +24,7 @@ class IvaProcess implements IvaProcessInterface {
 			'nro_control' => $inputArray['nro_control'],
 			'monto_base' => $inputArray['monto_base'],
 			'iva_retenido' => ($inputArray['monto_base']*$inputArray['alicuota']*$inputArray['tasa_retencion'])/10000,
-			'monto_total' => $inputArray['base_imponible']+($inputArray['base_imponible']*$inputArray['alicuota'])/100,
+			'monto_total' => $inputArray['monto_base']+($inputArray['monto_base']*$inputArray['alicuota'])/100,
 			'monto_exento' => 0,
 			'nro_nota_credito' => 0,
 			'alicuota' => $inputArray['alicuota'],
