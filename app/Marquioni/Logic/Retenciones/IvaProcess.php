@@ -15,21 +15,21 @@ class IvaProcess implements IvaProcessInterface {
 	{
 		$iva = $this->iva;
 		$data = array(
-			'agente_rif' => strtoupper($inputArray['rif_agente']),
+			'agente_rif' => strtoupper($inputArray['agente_rif']),
 			'beneficiario_nombre' => strtoupper($inputArray['beneficiario_nombre']),
 			'rif_beneficiario' => strtoupper($inputArray['rif_beneficiario']),
 			'periodo' => $inputArray['year'].$inputArray['month'],
-			'fecha_facturacion' => date("Y-m-d",strtotime($inputArray['date_fact'])),
+			'fecha_facturacion' => date("Y-m-d",strtotime($inputArray['fecha_facturacion'])),
 			'nro_factura' => $inputArray['nro_factura'],
 			'nro_control' => $inputArray['nro_control'],
-			'monto_base' => $inputArray['base_imponible'],
-			'iva_retenido' => ($inputArray['base_imponible']*$inputArray['tasa_iva']*$inputArray['tasa_retencion'])/10000,
-			'monto_total' => $inputArray['base_imponible']+($inputArray['base_imponible']*$inputArray['tasa_iva'])/100,
+			'monto_base' => $inputArray['monto_base'],
+			'iva_retenido' => ($inputArray['monto_base']*$inputArray['alicuota']*$inputArray['tasa_retencion'])/10000,
+			'monto_total' => $inputArray['base_imponible']+($inputArray['base_imponible']*$inputArray['alicuota'])/100,
 			'monto_exento' => 0,
 			'nro_nota_credito' => 0,
-			'alicuota' => $inputArray['tasa_iva'],
+			'alicuota' => $inputArray['alicuota'],
 			'tipo_operacion' => 'c',
-			'id_comprobante' => $inputArray['numero_comprobante']
+			'id_comprobante' => $inputArray['id_comprobante']
 		);
 		$v = $this->validarDatosRegistro($data);
 		if($this->validarSuccess())
