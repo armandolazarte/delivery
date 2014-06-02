@@ -40,6 +40,19 @@ class EloquentIvaRepository implements IvaRepository {
 		}
 	}
 
+	public function obtenerQuincenaPorMes($quincena,$month,$year){
+		$query = '';
+		switch($quincena){
+			case 1:
+				$query = $this->iva->whereBetween('fecha_facturacion',array(date('Y-m-d',mktime(0,0,0,1,$month,$year)),date('Y-m-d',mktime(0,0,0,15,$month,$year))))->get();
+			break;
+			case 2:
+				$query = $this->iva->whereBetween('fecha_facturacion',array(date('Y-m-d',mktime(0,0,0,16,$month,$year)),date('Y-m-d',mktime(0,0,0,30,$month,$year))))->get();
+			break;
+		}
+		return $query;
+	}
+
 	public function paginarTodos($perPage){
 		$result = $this->iva->orderBy('created_at','desc')->paginate($perPage);
 		return $result;

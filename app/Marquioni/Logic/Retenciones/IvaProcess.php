@@ -88,6 +88,21 @@ class IvaProcess implements IvaProcessInterface {
 
 	}
 
+	public function GenerarTXT($quincena,$month,$year) {
+		
+		if(isset($quincena) && isset($month) && isset($year))
+		{
+			$output ='';
+			$query = json_decode($this->iva->obtenerQuincenaPorMes($quincena,$month,$year),true);
+			foreach($query as $item) {
+				$output .= $item['agente_rif']."\t".$item['periodo']."\t".$item['fecha_facturacion']."\t".$item['tipo_operacion']."\t".'01'."\t".$item['rif_beneficiario']."\t".$item['nro_factura']."\t".$item['nro_control']."\t".$item['monto_total']."\t".$item['monto_base']."\t".$item['iva_retenido']."\t".'0'."\t".$item['periodo'].str_pad($item['id'],8,'0',STR_PAD_LEFT)."\t".$item['monto_exento']."\t".$item['alicuota']."\t".'0'."\n";
+			}
+			echo $output;
+		}
+		
+
+	}
+
 	public function validarSuccess()
 	{
 		if($this->validarStatus == TRUE)

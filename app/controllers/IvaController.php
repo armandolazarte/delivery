@@ -82,8 +82,13 @@ class IvaController extends \BaseController {
 	public function edit($id)
 	{
 		//
+		
 	}
 
+	public function generarTXT()
+	{
+		return $this->metodos->generarTXT(1,5,2014);
+	}
 	/**
 	 * Update the specified resource in storage.
 	 *

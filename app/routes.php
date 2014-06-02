@@ -10,7 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+Route::get('generarTXT','IvaController@generarTXT');
 Route::get('/','HomeController@getIndex');
 Route::controller('ventas','VentasController');
 Route::controller('compras','ComprasController');

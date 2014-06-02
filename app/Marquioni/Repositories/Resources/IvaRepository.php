@@ -5,6 +5,7 @@ interface IvaRepository {
 	public function buscarPorId($id);
 	public function crear($input);
 	public function paginarTodos($perPage);
+	public function obtenerQuincenaPorMes($quincena,$month,$year);
 }
 
 ?>
